@@ -1,59 +1,65 @@
 package JeuDeGo.Go;
 
+import java.util.ArrayList;
+
 public class Joueur {
 
 	private String pseudo;
 	private int score;
-	private Pierre pierre;
-	private boolean fin;
+	ArrayList<Pierre> ListePierre = new ArrayList<Pierre>();
+	private CouleurPierre coul;
+	private boolean passe;
 	private int nbPrisonniers;
 	
-	public Joueur(String pseudo, Pierre pierre, int score){
-		this.pseudo = pseudo;
-		this.pierre = pierre;
-		fin = false;
-		nbPrisonniers = 0;
+	public Joueur(){
+
+		this.passe = false;
+		this.score = 0;
+		this.nbPrisonniers = 0;
+
+	}
+	
+	//Getters et setters		
+	public boolean getPasse(){
+		return passe;
+	}
+	
+	public void setPasse(boolean b){
+		passe = b;
+	}
+
+
+	public CouleurPierre getCoul() {
+		return coul;
+	}
+
+	public void setCoul(CouleurPierre coul) {
+		this.coul = coul;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
 		this.score = score;
 	}
-	
-	//Getters et setters
-	public String getPseudo(){
-		return pseudo;
-	}
-	
+
 	public int getNbPrisonniers() {
 		return nbPrisonniers;
 	}
-	
-	public Pierre getPierre(){
-		return pierre;
-	}
-	
-	public int getScore(){
-		return score;
-	}
-	
-	public boolean getFin(){
-		return fin;
+
+	public void setNbPrisonniers(int nbPrisonniers) {
+		this.nbPrisonniers = nbPrisonniers;
 	}
 
-
-	//Augmente le nombre de prisonniers du joueur 
-	public void addPrisonniers(int nb) {
-		nbPrisonniers+=nb;
+	public String getPseudo() {
+		return pseudo;
 	}
 
-	
-	//Augmente le score du joueur
-	public void addPoint(int p){
-		score+=p;
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
 	}
 	
-	
-	//si le joueur souhaite terminer la partie ou pas
-	public void setFin(boolean b){
-		fin = b;
-	}
-	
-	
+		
 }
