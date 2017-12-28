@@ -60,6 +60,11 @@ public class Joueur {
 	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
 	}
+
+	public void ajoutePoint(int point) {
+		 score += point;
+		
+	}
 	
 		
 }
