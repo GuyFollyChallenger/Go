@@ -296,7 +296,7 @@ public class Goban {
 	}
 	
 	
-	public void creeTerritoire(int x, int y, List<Integer> indexIntersVide) {
+	public void creeGroupeTerritoire(int x, int y, List<Integer> indexIntersVide) {
 		
 		for(int i=0; i<inters.size(); i++){
 			
@@ -312,7 +312,7 @@ public class Goban {
 				if(inters.get(i).getPierre()== null){
 					if(indexIntersVide.indexOf(i)==-1){
 						indexIntersVide.add(i);
-						creeTerritoire(x, y+1, indexIntersVide);
+						creeGroupeTerritoire(x, y+1, indexIntersVide);
 					}
 				}
 			}
@@ -322,7 +322,7 @@ public class Goban {
 				if(inters.get(i).getPierre()== null){
 					if(indexIntersVide.indexOf(i)==-1){
 						indexIntersVide.add(i);
-						creeTerritoire(x, y-1, indexIntersVide);
+						creeGroupeTerritoire(x, y-1, indexIntersVide);
 					}
 				}
 			}
@@ -333,7 +333,7 @@ public class Goban {
 				if(inters.get(i).getPierre() == null){
 					if(indexIntersVide.indexOf(i)==-1){
 						indexIntersVide.add(i);
-						creeTerritoire(x-1, y, indexIntersVide);
+						creeGroupeTerritoire(x-1, y, indexIntersVide);
 					}
 				}
 			}
@@ -343,7 +343,7 @@ public class Goban {
 				if(inters.get(i).getPierre()== null){
 					if(indexIntersVide.indexOf(i)==-1){
 						indexIntersVide.add(i);
-						creeTerritoire(x+1, y, indexIntersVide);
+						creeGroupeTerritoire(x+1, y, indexIntersVide);
 					}
 				}
 			}
@@ -366,7 +366,7 @@ public class Goban {
 						proprietaire = inters.get(j).getPierre();
 					}
 					else {
-						if(inters.get(j).getPierre()!=proprietaire){
+						if(inters.get(j).getPierre().getCouleur()!=proprietaire.getCouleur()){
 							return null;
 						}
 					}
@@ -382,7 +382,7 @@ public class Goban {
 						proprietaire = inters.get(j).getPierre();
 					}
 					else {
-						if(inters.get(j).getPierre()!=proprietaire){
+						if(inters.get(j).getPierre().getCouleur()!=proprietaire.getCouleur()){
 							return null;
 						}
 					}
@@ -399,7 +399,7 @@ public class Goban {
 						proprietaire = inters.get(j).getPierre();
 					}
 					else {
-						if(inters.get(j).getPierre()!=proprietaire){
+						if(inters.get(j).getPierre().getCouleur()!=proprietaire.getCouleur()){
 						return null;
 						}
 					}
@@ -414,7 +414,7 @@ public class Goban {
 						proprietaire = inters.get(j).getPierre();
 					}
 					else {
-						if(inters.get(j).getPierre()!=proprietaire){
+						if(inters.get(j).getPierre().getCouleur()!=proprietaire.getCouleur()){
 							return null;
 						}
 					}
@@ -459,7 +459,7 @@ public class Goban {
 				}
 				if(aTerritoire == false){
 					List<Integer> newIndexIntersVide = new ArrayList<Integer>();
-					creeTerritoire(inters.get(i).getX(), inters.get(i).getY(), newIndexIntersVide);
+					creeGroupeTerritoire(inters.get(i).getX(), inters.get(i).getY(), newIndexIntersVide);
 					listeTerritoire.add(newIndexIntersVide);
 				}
 			}
