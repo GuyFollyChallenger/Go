@@ -187,7 +187,7 @@ public class Go {
 		}
 		else
 		{
-			System.out.println("**** Partie nulle ****");
+			System.out.println("*** Partie nulle ***");
 		}
 
 	}
