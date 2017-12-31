@@ -39,8 +39,8 @@ public class Goban {
 		for(Intersection inter : inters){
 			if( inter.getX() == x && inter.getY() == y){
 
-				//s'il n'y a pas pierre qui existent deja sur l'intersection
-				//on pose la pierre sur l'intersection
+				//s'il n'y a pas pierre qui existent deja sur l'intersection.
+				//on pose la pierre sur l'intersection.
 				if(inter.getPierre()==null){       
 					inter.setPierre(p);
 				}

@@ -1,5 +1,6 @@
 package JeuDeGo.Go;
 
+
 public class Intersection {
 
 	private int x;

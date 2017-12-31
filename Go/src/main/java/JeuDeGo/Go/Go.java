@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 //Classe qui permet de joueur le jeu de A à Z en mode console!
-//Le manuel d'utilisation peut etre utile
+//Le manuel d'utilisation peut etre utile.
 public class Go {
 
 
