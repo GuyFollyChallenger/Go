@@ -33,7 +33,7 @@ public class Goban {
 		}
 	}
 
-	//ajouter une pierre sur une intersection du goban
+	//ajouter une pierre sur une intersection du goban.
 	public void ajoutePierre(int x, int y, Pierre p){
 		inter_occupe = false;
 		for(Intersection inter : inters){
