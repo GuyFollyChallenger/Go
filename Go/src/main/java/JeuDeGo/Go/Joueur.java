@@ -11,11 +11,13 @@ public class Joueur {
 	private boolean passe;
 	private int nbPrisonniers;
 	
-	public Joueur(){
+	public Joueur(String pseudo, CouleurPierre coul){
 
 		this.passe = false;
 		this.score = 0;
 		this.nbPrisonniers = 0;
+		this.pseudo = pseudo;
+		this.coul = coul;
 
 	}
 	
@@ -64,6 +66,9 @@ public class Joueur {
 	public void ajoutePoint(int point) {
 		 score += point;
 		
+	}
+	public void ajoutePrisonniers(int nb) {
+		nbPrisonniers+=nb;
 	}
 	
 		

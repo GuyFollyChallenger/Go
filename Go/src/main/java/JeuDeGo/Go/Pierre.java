@@ -15,6 +15,7 @@ public class Pierre {
 	public String toString(){
 		String print ="";
 		print+= couleur.toString().charAt(0);
+		print+= " ";
 		return print;
 	}
 }
